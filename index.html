@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with FoodHut landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Mis 18, Santy Diez</title>
+    <style>
+        /* Estilos básicos opcionales */
+        #contador {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            font-size: 1em;
+            margin-top: 10%;
+        }
+    </style>
+     <style>
+        /* Estilo para el botón */
+        #enable-audio {
+            display: none;
+            background-color: #00bfff; /* Color celeste */
+            color: white; /* Letras blancas */
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        #enable-audio:hover {
+            background-color: #0099cc; /* Celeste más oscuro al pasar el mouse */
+        }
+
+        #enable-audio:active {
+            transform: scale(0.95); /* Pequeño efecto al hacer clic */
+        }
+    </style>
+ 
+    
+    <!-- font icons-->
+    <link rel="shortcut icon" href="assets/imgs/icon16 afa.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/vendors/animate/animate.css">
+
+    <!-- Bootstrap + FoodHut main styles -->
+	<link rel="stylesheet" href="assets/css/foodhut.css">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    
+    <!-- Navbar 
+    <nav class="custom-navbar navbar navbar-expand-lg navbar-dark fixed-top" data-spy="affix" data-offset-top="10">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Invitación</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallary">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#book-table">Regalo</a>
+                </li>
+            </ul>
+            <a class="navbar-brand m-auto" href="#">
+                <img src="assets/imgs/logo.svg" class="brand-img" alt="">
+                <span class="brand-txt">Mis 18, Santy</span>
+            </a>
+            <ul class="navbar-nav">
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Ubicación</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testmonial">¿Venís?</a>
+                </li>
+            </ul>
+        </div> --> 
+    </nav>
+    <!-- header -->
+    <header id="home" class="header">
+        <div class="overlay text-white text-center">
+            <h1 class="display-2 font-weight-bold my-3">Mis 18, Santy</h1>
+            <h2 class="display-4 mb-5">La vida es una fiesta, vení a celebrarla conmigo.</h2>
+            <h3>Faltan:
+            <div id="contador">
+                <span id="dias">0</span> días 
+                <span id="horas">0</span> horas 
+                <span id="minutos">0</span> minutos 
+                <span id="segundos">0</span> segundos
+            </div></h3>
+            <!-- Enlace al archivo contador.js -->
+            <script src="assets/js/contador.js"></script>
+            <audio id="background-audio" hidden>
+                <source src="assets/music/musica1.mp3" type="audio/mpeg">
+                <source src="assets/music/musica1.ogg" type="audio/ogg">
+                Tu navegador no soporta el reproductor de audio.
+            </audio>
+            <button id="enable-audio">Activar Música</button>
+          
+            <script>
+                // Intenta quitar el mute después de que la página cargue
+                window.addEventListener('load', function () {
+                    const audio = document.getElementById('background-audio');
+                    audio.muted = false; // Desactiva el mute para reproducir con sonido
+                    audio.play().catch(error => {
+                        console.log('El navegador bloqueó la reproducción automática:', error);
+                    });
+                });
+            </script>
+            
+            
+            
+            
+                <br>
+            <a class="btn btn-lg btn-primary" href="#gallary">Ver Galería de Fotos</a>
+        </div>
+    </header>
+
+    <!--  About Section  -->
+    <div id="about" class="container-fluid wow fadeIn" id="about"data-wow-duration="1.5s">
+        <div class="row">
+            <div class="col-lg-6 has-img-bg"></div>
+            <div class="col-lg-6">
+                <div class="row justify-content-center">
+                    <div class="col-sm-8 py-5 my-5">
+                        <h2 class="mb-4">Te espero!!!</h2>
+                        <p> El día 1 de febrero del 2025 (horario a confirmar).<br><br>Estaré festejando mi cumpleaños y estás invitado.</p>
+                        <p><b>Quinta "El Paraíso", Moyano 2791 entre Argerich y Chutro, Manuel Alberti.</b></p>
+                        <p>Por favor llevar bebidas propias, traje de baño y toalla.</p>
+                        <p>
+                            Gracias!!!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  gallary Section  -->
+    <div id="gallary" class="text-center bg-dark text-light has-height-md middle-items wow fadeIn">
+        <h2 class="section-title">Mis Fotos</h2>
+    </div>
+    <div class="gallary row">
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-1.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-2.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-3.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-4.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+       <!-- <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-5.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-6.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-7.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-8.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-9.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-10.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-11.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-12.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+    </div>-->
+
+    <!-- book a table Section  -->
+    <div class="container-fluid has-bg-overlay text-center text-light has-height-lg middle-items" id="book-table">
+        <div class="">
+            <h2 class="section-title mb-5">Regalo</h2>
+            <h2>Tu presencia es el mejor regalo!!!! </h2><br>   
+            <h3>Pero si querés obsequiarme algo y no sabes qué,te dejo mi alias:</h3><br><h2>   santiago.370.sofa.mp</h2><br>
+           <!-- <div class="row mb-5">
+                <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+                    <input type="email" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="EMAIL">
+                </div>
+                <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+                    <input type="number" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="NUMBER OF GUESTS" max="20" min="0">
+                </div>
+                <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+                    <input type="time" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="EMAIL">
+                </div>
+                <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+                    <input type="date" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="12/12/12">
+                </div>
+            </div>
+          
+        </div>
+    </div>-->
+
+    <!-- BLOG Section 
+    <div id="blog" class="container-fluid bg-dark text-light py-5 text-center wow fadeIn">
+        <h2 class="section-title py-5">Cnfirmá tú asistencia</h2>
+        <div class="row justify-content-center">
+            <div class="col-sm-7 col-md-4 mb-5">
+                <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#foods" role="tab" aria-controls="pills-home" aria-selected="true">Foods</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#juices" role="tab" aria-controls="pills-profile" aria-selected="false">Juices</a>
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="foods" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="row">
+                    <!--<div class="col-md-4">
+                        <div class="card bg-transparent border my-3 my-md-0">
+                            <img src="assets/imgs/blog-1.jpg" alt="Muchas Gracias!!!"/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">$5</a></h1>
+                                <h4 class="pt20 pb20">Reiciendis Laborum </h4>
+                                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa provident illum officiis fugit laudantium voluptatem sit iste delectus qui ex. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-transparent border my-3 my-md-0">
+                            <img src="assets/imgs/blog-2.jpg" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">$12</a></h1>
+                                <h4 class="pt20 pb20">Adipisci Totam</h4>
+                                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa provident illum officiis fugit laudantium voluptatem sit iste delectus qui ex. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-transparent border my-3 my-md-0">
+                            <img src="assets/imgs/blog-3.jpg" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">$8</a></h1>
+                                <h4 class="pt20 pb20">Dicta Deserunt</h4>
+                                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa provident illum officiis fugit laudantium voluptatem sit iste delectus qui ex. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="juices" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="row">
+                    <div class="col-md-4 my-3 my-md-0">
+                        <div class="card bg-transparent border">
+                            <img src="assets/imgs/blog-4.jpg" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">$15</a></h1>
+                                <h4 class="pt20 pb20">Consectetur Adipisicing Elit</h4>
+                                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa provident illum officiis fugit laudantium voluptatem sit iste delectus qui ex. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 my-3 my-md-0">
+                        <div class="card bg-transparent border">
+                            <img src="assets/imgs/blog-5.jpg" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">$29</a></h1>
+                                <h4 class="pt20 pb20">Ullam Laboriosam</h4>
+                                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa provident illum officiis fugit laudantium voluptatem sit iste delectus qui ex. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 my-3 my-md-0">
+                        <div class="card bg-transparent border">
+                            <img src="assets/imgs/blog-6.jpg" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">$3</a></h1>
+                                <h4 class="pt20 pb20">Fugit Ipsam</h4>
+                                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa provident illum officiis fugit laudantium voluptatem sit iste delectus qui ex. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+
+    <!-- REVIEWS Section  -->
+    <div id="testmonial" class="container-fluid wow fadeIn bg-dark text-light has-height-lg middle-items">
+        <h1 class="section-title my-5 text-center"> </h1>
+        <section id="formulario">
+            <div class="form_container">
+                    <!-- modify this form HTML and place wherever you want your form -->
+                <form id="my_form"
+                action="https://formspree.io/f/xgveoler"
+                method="POST"
+                >  <h2>Confirmá tu asistencia:</h2>
+                <label> Nombre y Apellido </label> <br>
+
+                <input placeholder="Ingrese su Nombre" type="nombre" name="nombre" required><br>
+                                   
+                <label>¿Venís?</label><br>
+                <input placeholder="si o no"  type="addres" name="addres" required> <br>
+                <label>¿Con cuántas personas venís?</label><br>
+                <input placeholder="¿Cuántas personas vienen?" type="number" name="number" required>
+                <br>
+                
+                <label>Mensaje</label> <br>
+                <textarea placeholder="Ingrese su mensaje"  rows="7" name="message" required></textarea><br>
+                <!-- your other form fields go here -->
+                <div>
+                    <button type="submit">Enviar</button>
+                </div>
+                
+            </form>
+            
+  
+            <!--<div class="row mt-3 mb-5">
+            <div class="col-md-4 my-3 my-md-0">
+                <div class="testmonial-card">
+                    <h3 class="testmonial-title">John Doe</h3>
+                    <h6 class="testmonial-subtitle">Web Designer</h6>
+                    <div class="testmonial-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum nobis eligendi, quaerat accusamus ipsum sequi dignissimos consequuntur blanditiis natus. Aperiam!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 my-3 my-md-0">
+                <div class="testmonial-card">
+                    <h3 class="testmonial-title">Steve Thomas</h3>
+                    <h6 class="testmonial-subtitle">UX/UI Designer</h6>
+                    <div class="testmonial-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum minus obcaecati cum eligendi perferendis magni dolorum ipsum magnam, sunt reiciendis natus. Aperiam!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 my-3 my-md-0">
+                <div class="testmonial-card">
+                    <h3 class="testmonial-title">Miranda Joy</h3>
+                    <h6 class="testmonial-subtitle">Graphic Designer</h6>
+                    <div class="testmonial-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, nam. Earum nobis eligendi, dignissimos consequuntur blanditiis natus. Aperiam!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+    <!-- CONTACT Section  -->
+    <div id="contact" class="container-fluid bg-dark text-light border-top wow fadeIn">
+        <div class="row">
+            <div class="col-md-6 px-0">
+                <div class="grid_ubi">
+                    <div class="itemubi">
+                        <br> <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3290.634460784597!2d-58.77572322426698!3d-34.43603907301486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDI2JzA5LjciUyA1OMKwNDYnMjMuMyJX!5e0!3m2!1ses-419!2sar!4v1735580333738!5m2!1ses-419!2sar" 
+                        width="auto" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>          
+               
+               
+                <!--  <div id="map" style="width: 100%; height: 100%; min-height: 400px"></div>-->
+               </div>
+                  <div class="col-md-6 px-5 has-height-lg middle-items">
+                <h3>Ubicación</h3>
+                <p>Quinta "Del Viso Pilar" </p>
+                <div class="text-muted">
+                    <p><span class="ti-location-pin pr-3"></span> Moyano 2791 entre Argerich y Chutro, Manuel Alberti.</p>
+                    <p><span class="ti-support pr-3"></span> (11) 68517340</p><br><p>Patri</p>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- page footer 
+    <div class="container-fluid bg-dark text-light has-height-md middle-items border-top text-center wow fadeIn">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>EMAIL US</h3>
+                <P class="text-muted">info@website.com</P>
+            </div>
+            <div class="col-sm-4">
+                <h3>CALL US</h3>
+                <P class="text-muted">(123) 456-7890</P>
+            </div>
+            <div class="col-sm-4">
+                <h3>FIND US</h3>
+                <P class="text-muted">12345 Fake ST NoWhere AB Country</P>
+            </div>
+        </div>
+    </div>
+    <div class="bg-dark text-light text-center border-top wow fadeIn">
+        <p class="mb-0 py-3 text-muted small">&copy; Copyright <script>document.write(new Date().getFullYear())</script>Realizado <i class="ti-heart text-danger"></i> por <a>Invitaciones_Fer</a></p>
+    </div> -->
+    <!-- end of page footer -->
+
+	<!-- core  -->
+    <script src="vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap affix -->
+    <script src="vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- wow.js -->
+    <script src="vendors/wow/wow.js"></script>
+    
+    <!-- google maps 
+    <script async defer src=""></script>
+<script async defer src=""></script>-->
+    <!-- FoodHut js -->
+    <script src="assets/js/foodhut.js"></script>
+        <!--contador-->
+        <script src="contador.js">
+            // Ajusta aquí la fecha del evento
+    const fechaEvento = new Date("2025-02-02T20:00:00").getTime();
+    
+    const contador = setInterval(() => {
+        const ahora = new Date().getTime();
+        const distancia = fechaEvento - ahora;
+    
+        const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+    
+        document.getElementById("dias").innerText = dias;
+        document.getElementById("horas").innerText = horas;
+        document.getElementById("minutos").innerText = minutos;
+        document.getElementById("segundos").innerText = segundos;
+    
+        if (distancia < 0) {
+            clearInterval(contador);
+            document.getElementById("contador").innerText = "¡El evento ha comenzado!";
+        }
+    }, 1000);
+    
+        </script>
+         <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const audio = document.getElementById('background-audio');
+                const enableButton = document.getElementById('enable-audio');
+    
+                // Intenta reproducir automáticamente
+                audio.play().then(() => {
+                    console.log('Reproducción automática exitosa.');
+                }).catch(error => {
+                    console.log('Reproducción automática bloqueada:', error);
+    
+                    // Mostrar el botón si la reproducción es bloqueada
+                    enableButton.style.display = 'block';
+                    enableButton.addEventListener('click', () => {
+                        audio.play().then(() => {
+                            console.log('Audio activado manualmente.');
+                            enableButton.style.display = 'none'; // Ocultar el botón
+                        }).catch(err => {
+                            console.log('Error al reproducir manualmente:', err);
+                        });
+                    });
+                });
+            });
+        </script>
+    </body>
+
+</html>
